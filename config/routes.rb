@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   # EXAMPLE JSON ROUTE WITH API NAMESPACE
   namespace :api do
-    get "/practice" => "params_practice#index"
+    get "/practice" => "params_practice#upcase_word"
+    get "/practice/:word" => "params_practice#upcase_word_wildcard"
+    post "/practice" => "params_practice#upcase_word"
   end
 end
